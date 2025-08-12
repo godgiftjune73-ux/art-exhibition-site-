@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArtExhibit — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>ArtExhibit</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="dashboard.html">Artist Dashboard</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to ArtExhibit</h2>
+      <p>Browse unique artworks, discover talented artists, and bring beautiful pieces into your home.</p>
+      <a class="btn" href="gallery.html">Explore the Gallery</a>
+    </section>
+
+    <section class="featured">
+      <h2>Featured Artworks</h2>
+      <div id="featured-gallery" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> ArtExhibit — All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
