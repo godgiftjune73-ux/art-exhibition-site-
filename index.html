@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Exhibition</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .buy-btn {
-            background-color: #635bff;
-            color: white;
-            padding: 10px 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .buy-btn:hover {
-            background-color: #4b43d6;
-        }
-    </style>
 </head>
 <body>
 <header>
@@ -33,60 +20,38 @@
 <main>
     <h2>Welcome to the Art Exhibition</h2>
     <p>Discover and purchase unique artwork from artists around the world.</p>
-
-    <!-- Example Stripe Buy Button -->
-    <a href="https://buy.stripe.com/test_14AdR93q8bhweZN8DLcZa00" 
-       target="_blank" 
-       class="buy-btn">Buy Now</a>
 </main>
 
 <footer>
     <p>© 2025 Art Exhibition</p>
 </footer>
 
-<!-- Tawk.to Live Chat -->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/689b0e1014e3a81923cb13ff/DEFAULT';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-    })();
+<!-- EmailJS Visitor Alert -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("-DxC42ZATW8CwmbTh"); // Your EmailJS Public Key
+    emailjs.send("service_8l88tnz", "__ejs-test-mail-service__", {
+        message: "Someone visited the homepage."
+    }).then(function(response) {
+        console.log("Visitor alert sent!", response.status, response.text);
+    }, function(error) {
+        console.error("Visitor alert failed", error);
+    });
+})();
 </script>
 
-<!-- EmailJS Visitor Alert -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script>
-    (function(){
-        emailjs.init("-DxC42ZATW8CwmbTh"); // Your EmailJS Public Key
-    })();
-
-    window.addEventListener('load', function() {
-        fetch("https://api.ipify.org?format=json")
-        .then(response => response.json())
-        .then(data => {
-            const visitorIP = data.ip;
-            const browserInfo = navigator.userAgent;
-            const currentPage = window.location.href;
-            const visitTime = new Date().toLocaleString();
-
-            // Send email alert via EmailJS
-            emailjs.send("service_8l88tnz", "__ejs-test-mail-service__", {
-                message: `New visitor detected!\n
-                          IP: ${visitorIP}\n
-                          Browser: ${browserInfo}\n
-                          Page: ${currentPage}\n
-                          Visit Time: ${visitTime}`
-            }).then(function(response) {
-                console.log("Visitor alert sent!", response.status, response.text);
-            }, function(error) {
-                console.error("Failed to send visitor alert", error);
-            });
-        });
-    });
+<!-- Tawk.to Live Chat -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/689b0e1014e3a81923cb13ff/1h89abcde'; 
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
 
 </body>
