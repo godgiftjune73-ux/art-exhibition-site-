@@ -1,37 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ArtExhibit — Cart</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>ArtExhibit</h1>
+<header>
+    <h1>🎨 Art Exhibition</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="dashboard.html">Artist Dashboard</a>
-      <a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="dashboard.html">Sell Your Art</a>
+        <a href="cart.html">Cart 🛒</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section>
-      <h2>Your Cart</h2>
-      <div id="cart-items" class="grid"></div>
-      <div class="cart-summary">
-        <p>Total: $<span id="cart-total">0</span></p>
-        <button id="checkout-btn">Checkout</button>
-      </div>
-    </section>
-  </main>
+<main>
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <button id="checkoutBtn">Checkout</button>
+</main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> ArtExhibit — All rights reserved.</p>
-  </footer>
+<footer>
+    <p>© 2025 Art Exhibition</p>
+</footer>
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
