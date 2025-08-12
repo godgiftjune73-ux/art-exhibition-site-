@@ -1,50 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ArtExhibit — Artist Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Art</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>ArtExhibit</h1>
+<header>
+    <h1>🎨 Art Exhibition</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="dashboard.html" class="active">Artist Dashboard</a>
-      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="dashboard.html">Sell Your Art</a>
+        <a href="cart.html">Cart 🛒</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section id="login-section">
-      <h2>Artist Login</h2>
-      <input id="artist-name" placeholder="Enter your name" />
-      <button id="login-btn">Login</button>
-    </section>
-
-    <section id="dashboard-section" class="hidden">
-      <h2>Welcome, <span id="artist-display"></span></h2>
-
-      <h3>Upload New Artwork</h3>
-      <form id="upload-form">
-        <input id="title" placeholder="Artwork title" required />
-        <input id="medium" placeholder="Medium (e.g., Painting, Photography)" required />
-        <input id="price" type="number" placeholder="Price" required />
-        <input id="image-url" placeholder="Image URL" required />
+<main>
+    <h2>Upload Your Artwork</h2>
+    <form id="uploadForm">
+        <input type="text" id="title" placeholder="Artwork Title" required>
+        <input type="number" id="price" placeholder="Price (USD)" required>
+        <input type="url" id="image" placeholder="Image URL" required>
         <button type="submit">Add Artwork</button>
-      </form>
+    </form>
+</main>
 
-      <h3>Your Listings</h3>
-      <div id="artist-listings" class="grid"></div>
-    </section>
-  </main>
+<footer>
+    <p>© 2025 Art Exhibition</p>
+</footer>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> ArtExhibit — All rights reserved.</p>
-  </footer>
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
