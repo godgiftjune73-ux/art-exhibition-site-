@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArtExhibit — Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>ArtExhibit</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="dashboard.html">Artist Dashboard</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Gallery</h2>
+      <div id="filters">
+        <input id="search" placeholder="Search artist or title..." />
+        <select id="filter-medium">
+          <option value="">All mediums</option>
+          <option>Painting</option>
+          <option>Photography</option>
+          <option>Digital</option>
+        </select>
+      </div>
+      <div id="gallery" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Artwork detail modal -->
+  <div id="art-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="close-modal">&times;</button>
+      <img id="modal-img" alt="art" />
+      <div class="meta">
+        <h3 id="modal-title"></h3>
+        <p id="modal-artist"></p>
+        <p id="modal-medium"></p>
+        <p><strong>$<span id="modal-price"></span></strong></p>
+        <button id="modal-add">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> ArtExhibit — All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
