@@ -1,165 +1,51 @@
-/* ===== Reset & Base ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #fdfdfd;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #0077cc;
+header {
+    background: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3 {
-  margin-bottom: 0.5em;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-}
-
-/* ===== Header ===== */
-.site-header {
-  background: #111;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-header nav a {
-  color: #fff;
-  margin-left: 15px;
-}
-
-.site-header nav a.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* ===== Footer ===== */
-.site-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-/* ===== Buttons ===== */
-button, .btn {
-  background: #0077cc;
-  color: white;
-  padding: 8px 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover, .btn:hover {
-  background: #005fa3;
-}
-
-/* ===== Layout ===== */
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-  background: #f0f0f0;
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
-.grid img {
-  max-width: 100%;
-  border-radius: 6px;
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
-.grid .card {
-  background: white;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+.card img {
+    max-width: 100%;
+    height: auto;
 }
 
-.grid .card h3 {
-  margin: 10px 0 5px;
+button, .buy-btn {
+    background: #635bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
-/* ===== Forms ===== */
-input, select {
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-}
-
-/* ===== Modal ===== */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal.hidden {
-  display: none;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  max-width: 600px;
-  border-radius: 6px;
-  display: flex;
-  gap: 20px;
-}
-
-.modal-content img {
-  max-width: 250px;
-  border-radius: 6px;
-}
-
-.modal-content .meta {
-  flex: 1;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: transparent;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-}
-
-/* ===== Cart ===== */
-.cart-summary {
-  margin-top: 20px;
-  font-size: 18px;
+button:hover, .buy-btn:hover {
+    background: #4b43d6;
 }
