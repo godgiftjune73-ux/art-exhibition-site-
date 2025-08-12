@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Your Cart</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,9 +18,9 @@
 </header>
 
 <main>
-    <h2>Your Cart</h2>
+    <h2>Your Shopping Cart</h2>
     <div id="cartItems"></div>
-    <button id="checkoutBtn">Checkout</button>
+    <button id="checkoutBtn">Checkout with Stripe</button>
 </main>
 
 <footer>
@@ -28,5 +28,33 @@
 </footer>
 
 <script src="app.js"></script>
+
+<!-- EmailJS Visitor Alert -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("-DxC42ZATW8CwmbTh");
+    emailjs.send("service_8l88tnz", "__ejs-test-mail-service__", {
+        message: "Someone visited the cart page."
+    }).then(function(response) {
+        console.log("Visitor alert sent!", response.status, response.text);
+    }, function(error) {
+        console.error("Visitor alert failed", error);
+    });
+})();
+</script>
+
+<!-- Tawk.to Live Chat -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/689b0e1014e3a81923cb13ff/1h89abcde';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 </body>
 </html>
